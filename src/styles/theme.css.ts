@@ -3,7 +3,7 @@ import { createGlobalTheme, createTheme, createThemeContract } from '@vanilla-ex
 import { rem } from './pxto';
 
 const sizes = {
-  app: rem(760),
+  app: rem(1200),
   appSpace: rem(24),
 };
 
@@ -76,8 +76,11 @@ const fontSizes = {
 
 const modeColors = createThemeContract({
   background: 'var(--ieum-color-background)',
-  contentPrimary: 'var(--ieum-color-content-primary)',
-  contentSecondary: 'var(--ieum-color-content-secondary)',
+  text: 'var(--ieum-color-text)',
+  textSecondary: 'var(--ieum-color-text-secondary)',
+
+  cardBackground: 'var(--ieum-color-card-background)',
+  cardBorder: 'var(--ieum-color-card-border)',
 
   selection: 'var(--ieum-color-selection)',
 });
@@ -111,16 +114,22 @@ const colors = {
 
 export const lightModeColors = createTheme(modeColors, {
   background: '#F1F2F4',
-  contentPrimary: '#202225',
-  contentSecondary: '#4F545C',
+  text: '#0B0C0D',
+  textSecondary: colors.blackAlpha60,
+
+  cardBackground: '#EDEDED',
+  cardBorder: colors.blackAlpha05,
 
   selection: 'rgba(0, 0, 0, 0.15)',
 });
 
 export const darkModeColors = createTheme(modeColors, {
-  background: '#F1F2F4',
-  contentPrimary: '#202225',
-  contentSecondary: '#4F545C',
+  background: '#0B0C0D',
+  text: '#F1F2F4',
+  textSecondary: colors.whiteAlpha60,
+
+  cardBackground: 'rgba(237, 237, 237, 0.1)',
+  cardBorder: colors.whiteAlpha05,
 
   selection: 'rgba(255, 255, 255, 0.15)',
 });
