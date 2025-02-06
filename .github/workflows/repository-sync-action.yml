@@ -1,0 +1,32 @@
+name: 'Repository Sync Action'
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - '*'
+
+permissions: write-all
+
+jobs:
+  sync-fork-repo:
+    runs-on: ubuntu-latest
+    if: github.repository == 'ieum-ai/ieumai-frontend'
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+          token: ${{ secrets.GH_ACCESS_TOKEN }}
+      - name: Commit files
+        run: |
+          git config user.email "saas@gdghufs.com"
+          git config user.name "gdghufs-saas"
+          git commit --amend --author="gdghufs-saas <saas@gdghufs.com>" --no-edit
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GH_ACCESS_TOKEN }}
+          repository: gdghufs-saas/ieumai-frontend
+          force: true
+          branch: ${{ github.ref }}
