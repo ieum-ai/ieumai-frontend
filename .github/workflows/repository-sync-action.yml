@@ -1,30 +1,32 @@
-name: repository-sync-action
+name: 'Repository Sync Action'
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ main ]
+    branches:
+      - '*'
+
+permissions: write-all
 
 jobs:
-  build:
+  sync-fork-repo:
     runs-on: ubuntu-latest
-    container: pandoc/latex
+    if: github.repository == 'ieum-ai/ieumai-frontend'
     steps:
-      - uses: actions/checkout@v2
-      - name: Install mustache (to update the date)
-        run: apk add ruby && gem install mustache
-      - name: creates output
-        run: sh ./build.sh
-      - name: Pushes to another repository
-        id: push_directory
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.GH_ACCESS_TOKEN }}
+      - uses: actions/checkout@v3
         with:
-          source-directory: 'output'
-          destination-github-username: gdghufs-saas
-          destination-repository-name: ieumai-frontend
-          user-email: ${{ secrets.GH_EMAIL }}
-          commit-message: ${{ github.event.commits[0].message }}
-          target-branch: main
-      - name: Test get variable exported by push-to-another-repository
-        run: echo $DESTINATION_CLONED_DIRECTORY
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+          token: ${{ secrets.GH_ACCESS_TOKEN }}
+      - name: Commit files
+        run: |
+          git config user.email "saas@gdghufs.com"
+          git config user.name "gdghufs-saas"
+          git commit --amend --author="gdghufs-saas <saas@gdghufs.com>" --no-edit
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GH_ACCESS_TOKEN }}
+          repository: gdghufs-saas/ieumai-frontend
+          force: true
+          branch: ${{ github.ref }}
