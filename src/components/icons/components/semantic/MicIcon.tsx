@@ -1,10 +1,8 @@
-import React, { FC } from 'react';
-
 import Icon from '../../icon';
 import { IconProps } from '../../types';
 
-export const MicIcon: FC<IconProps> = (props) => (
-  <Icon type="stroke" {...props}>
+export const MicIcon = (props: IconProps) => (
+  <Icon type="fill" {...props}>
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <mask
         id="mask0_267_656"

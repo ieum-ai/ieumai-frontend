@@ -1,9 +1,7 @@
-import React, { FC } from 'react';
-
 import Icon from '../../icon';
 import { IconProps } from '../../types';
 
-export const BrandLogo: FC<IconProps> = (props) => (
+export const BrandLogo = (props: IconProps) => (
   <Icon type="fill" {...props}>
     <svg
       width="147"

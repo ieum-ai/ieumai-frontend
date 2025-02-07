@@ -1,7 +1,7 @@
-import { FC, ReactElement } from 'react';
+import { Fragment } from 'react';
 
-const HomePage: FC = (): ReactElement => {
-  return <div>Main</div>;
+const HomePage = () => {
+  return <Fragment>Main</Fragment>;
 };
 
 export default HomePage;

@@ -1,11 +1,12 @@
 import '@ieum/styles/global.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { FC, PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren } from 'react';
 
-import Layout from './_components/Layout';
 import { ThemeProvider } from '@ieum/states/ThemeProvider';
 import { darkModeColors, lightModeColors } from '@ieum/styles';
+
+import Layout from '@ieum/app/_components/Layout';
 
 const pretendard = localFont({
   src: './_fonts/PretendardVariable.woff2',
@@ -46,10 +47,11 @@ const colorThemeScript = `
 
 export const metadata: Metadata = {
   title: 'ieum.ai',
-  description: '',
+  description:
+    '한국어 음성 데이터를 수집·분석하여 지역 방언을 식별하고 보존하는 오픈소스 프로젝트입니다. 방대한 음성 아카이브 구축을 목표로 연구와 개발을 진행합니다.',
 };
 
-const RootLayout: FC<PropsWithChildren> = ({ children }): ReactElement => {
+const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>

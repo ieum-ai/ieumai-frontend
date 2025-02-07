@@ -2,7 +2,6 @@
 import { clsx } from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FC, ReactElement } from 'react';
 
 import { BrandLogo } from '@ieum/components/icons';
 
@@ -16,7 +15,7 @@ const MENU = [
   { key: 'DATABASE', path: '/database', title: '데이터베이스' },
 ];
 
-const Header: FC = (): ReactElement => {
+const Header = () => {
   const _pathname: string = usePathname();
   const pathname: string = '/' + _pathname.split('/')[1];
 

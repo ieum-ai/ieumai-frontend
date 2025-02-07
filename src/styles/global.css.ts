@@ -1,8 +1,9 @@
 import './reset.css';
 import './animation.css';
 
-import { globalStyle } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 
+import { rem } from './pxto';
 import { theme } from './theme.css';
 
 globalStyle('body', {
@@ -25,4 +26,16 @@ globalStyle('[data-theme="dark"]', {
 
 globalStyle('::selection', {
   backgroundColor: theme.colors.selection,
+});
+
+globalStyle('main', {
+  ...theme.layouts.column,
+  flex: 1,
+  padding: theme.sizes.appSpace,
+});
+
+globalStyle('label > .required', {
+  alignSelf: 'center',
+  marginLeft: rem(2),
+  color: theme.colors.blue600,
 });

@@ -9,8 +9,3 @@ export const root = style({
   height: '100%',
   marginInline: 'auto',
 });
-
-export const main = style({
-  ...theme.layouts.column,
-  flex: 1,
-});

@@ -1,6 +1,6 @@
 import { Slot } from '@radix-ui/react-slot';
 import { clsx } from 'clsx';
-import { forwardRef, ComponentPropsWithoutRef, ReactElement } from 'react';
+import { forwardRef, ComponentPropsWithoutRef } from 'react';
 
 import * as styles from './styles.css';
 
@@ -10,7 +10,7 @@ type CardProps = ComponentPropsWithoutRef<'div'> & {
 };
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ asChild, className, children, ...props }, ref): ReactElement => {
+  ({ asChild, className, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'div';
 
     return (
@@ -24,7 +24,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
 Card.displayName = 'Card';
 
 export const CardHeader = forwardRef<HTMLDivElement, CardProps>(
-  ({ asChild, className, children, ...props }, ref): ReactElement => {
+  ({ asChild, className, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'div';
 
     return (
@@ -38,7 +38,7 @@ export const CardHeader = forwardRef<HTMLDivElement, CardProps>(
 CardHeader.displayName = 'CardHeader';
 
 export const CardBody = forwardRef<HTMLDivElement, CardProps>(
-  ({ asChild, className, children, ...props }, ref): ReactElement => {
+  ({ asChild, className, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'div';
 
     return (
