@@ -1,6 +1,9 @@
 'use client';
+import { useState } from 'react';
+
 import { Button } from '@ieum/components/button';
 import { Card, CardBody, CardHeader } from '@ieum/components/card';
+import { Checkbox } from '@ieum/components/checkbox';
 import { Input } from '@ieum/components/input';
 import { Select } from '@ieum/components/select';
 
@@ -15,6 +18,10 @@ const YEARS = [
 ];
 
 const ContributionPage = () => {
+  const [check, setCheck] = useState(false);
+
+  console.log(check);
+
   return (
     <main className={styles.root} data-animate={true}>
       <Card className={styles.card}>
@@ -48,6 +55,13 @@ const ContributionPage = () => {
           <Select label="지역(시/군/구)" options={[]} disabled />
         </CardBody>
       </Card>
+
+      <Checkbox
+        label="본인은 개인 정보 이용 약관에 동의하는 것을 최종 확인했습니다."
+        labelAlign="end"
+        checked={check}
+        onClick={() => setCheck(!check)}
+      />
     </main>
   );
 };
