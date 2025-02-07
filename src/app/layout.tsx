@@ -6,7 +6,7 @@ import { PropsWithChildren } from 'react';
 import { ThemeProvider } from '@ieum/states/ThemeProvider';
 import { darkModeColors, lightModeColors } from '@ieum/styles';
 
-import Layout from '@ieum/app/_components/Layout';
+import Layout from './_components/Layout';
 
 const pretendard = localFont({
   src: './_fonts/PretendardVariable.woff2',

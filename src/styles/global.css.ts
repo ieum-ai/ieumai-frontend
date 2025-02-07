@@ -1,7 +1,7 @@
 import './reset.css';
 import './animation.css';
 
-import { globalStyle, style } from '@vanilla-extract/css';
+import { globalStyle } from '@vanilla-extract/css';
 
 import { rem } from './pxto';
 import { theme } from './theme.css';
