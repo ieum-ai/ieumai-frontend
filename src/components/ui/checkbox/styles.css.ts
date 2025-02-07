@@ -21,7 +21,7 @@ export const checkbox = style({
 });
 
 globalStyle(`${checkbox}[aria-checked=true]`, {
-  borderWidth: rem(5),
+  borderWidth: rem(6),
   borderColor: theme.colors.formIconFill,
 });
 

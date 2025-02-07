@@ -35,7 +35,7 @@ export const formContainer = style({
 export const formInnerButton = style({
   position: 'absolute',
   top: '50%',
-  right: rem(16),
+  right: theme.sizes.formComponentPadding,
   transform: 'translateY(-50%)',
 });
 

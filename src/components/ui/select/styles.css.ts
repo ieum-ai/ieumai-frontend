@@ -31,7 +31,7 @@ globalStyle(`${disabled} select`, {
 export const select = style({
   width: '100%',
   height: '100%',
-  padding: `${rem(16)} ${rem(26)} 0 ${rem(26)}`,
+  padding: `${theme.sizes.formComponentPadding} ${theme.sizes.formComponentPadding} 0 ${theme.sizes.formComponentPadding}`,
   color: theme.colors.text,
   fontSize: theme.fontSizes.md,
   fontWeight: 500,
@@ -44,7 +44,7 @@ export const select = style({
 
 export const label = style({
   position: 'absolute',
-  left: rem(26),
+  left: theme.sizes.formComponentPadding,
   bottom: rem(22),
   color: theme.colors.textSecondary,
   fontSize: theme.fontSizes.md,
@@ -64,7 +64,7 @@ export const icon = style({
   fill: theme.colors.formIconFill,
   top: '50%',
   transform: 'translateY(-50%)',
-  right: rem(16),
+  right: theme.sizes.formComponentPadding,
   width: rem(28),
   height: rem(28),
   pointerEvents: 'none',

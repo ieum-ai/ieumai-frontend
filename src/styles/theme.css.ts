@@ -13,6 +13,7 @@ const sizes = {
   formComponentMinWidthMobile: rem(260),
   formComponentMaxWidth: rem(370),
   formComponentHeight: rem(68),
+  formComponentPadding: rem(16),
 };
 
 const fonts = {

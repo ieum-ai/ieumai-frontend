@@ -31,7 +31,7 @@ globalStyle(`${disabled} input`, {
 export const input = style({
   width: '100%',
   height: '100%',
-  padding: `${rem(16)} ${rem(26)} 0 ${rem(26)}`,
+  padding: `${theme.sizes.formComponentPadding} ${theme.sizes.formComponentPadding} 0 ${theme.sizes.formComponentPadding}`,
   color: theme.colors.text,
   fontSize: theme.fontSizes.md,
   fontWeight: 500,
@@ -42,7 +42,7 @@ export const input = style({
 
 export const label = style({
   position: 'absolute',
-  left: rem(26),
+  left: theme.sizes.formComponentPadding,
   bottom: rem(22),
   fontSize: theme.fontSizes.md,
   fontWeight: 500,
