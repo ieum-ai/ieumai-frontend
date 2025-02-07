@@ -10,6 +10,7 @@ export const root = style({
 
 export const checkbox = style({
   ...theme.layouts.center,
+  flexShrink: 0,
   width: rem(16),
   height: rem(16),
   border: `${rem(2)} solid ${theme.colors.formBorder}`,
@@ -27,8 +28,9 @@ globalStyle(`${checkbox}[aria-checked=true]`, {
 export const label = style({
   color: theme.colors.text,
   fontSize: theme.fontSizes.sm,
-  lineHeight: 1,
+  lineHeight: '160%',
   cursor: 'pointer',
+  wordBreak: 'keep-all',
 });
 
 export const indicator = style({
