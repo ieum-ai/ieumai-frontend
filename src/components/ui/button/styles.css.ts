@@ -4,6 +4,7 @@ import { rem, theme } from '@ieum/styles';
 
 export const root = style({
   ...theme.layouts.center,
+  flexShrink: 0,
   height: 'fit-content',
   border: `${rem(1)} solid transparent`,
   borderRadius: rem(10),

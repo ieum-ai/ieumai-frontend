@@ -6,7 +6,7 @@ export const root = style({
   ...theme.layouts.rowBetween,
   padding: rem(36),
   border: `${rem(1)} solid ${theme.colors.cardBorder}`,
-  borderRadius: rem(24),
+  borderRadius: rem(16),
   backgroundColor: theme.colors.cardBackground,
 });
 

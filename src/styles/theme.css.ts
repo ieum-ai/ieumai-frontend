@@ -5,8 +5,12 @@ import { rem } from './pxto';
 const sizes = {
   app: rem(1200),
   appSpace: rem(24),
+
+  headerHeight: rem(80),
+  headerHeightMobile: rem(56),
+
   formComponentMinWidth: rem(340),
-  formComponentMinWidthMobile: rem(280),
+  formComponentMinWidthMobile: rem(260),
   formComponentMaxWidth: rem(370),
   formComponentHeight: rem(68),
 };
@@ -81,6 +85,7 @@ const fontSizes = {
 
 const modeColors = createThemeContract({
   background: 'var(--ieum-color-background)',
+
   text: 'var(--ieum-color-text)',
   textSecondary: 'var(--ieum-color-text-secondary)',
 
@@ -154,6 +159,7 @@ const colors = {
 
 export const lightModeColors = createTheme(modeColors, {
   background: '#F1F2F4',
+
   text: colors.black,
   textSecondary: colors.blackAlpha60,
 
@@ -189,6 +195,7 @@ export const lightModeColors = createTheme(modeColors, {
 
 export const darkModeColors = createTheme(modeColors, {
   background: colors.black,
+
   text: '#F1F2F4',
   textSecondary: colors.whiteAlpha60,
 
