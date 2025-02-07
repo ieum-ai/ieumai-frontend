@@ -16,6 +16,7 @@ export const checkbox = style({
   borderRadius: rem(4),
   backgroundColor: 'transparent',
   transition: 'border-width 0.2s, border-color 0.2s',
+  willChange: 'border-width, border-color',
 });
 
 globalStyle(`${checkbox}[aria-checked=true]`, {

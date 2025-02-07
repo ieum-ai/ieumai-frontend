@@ -5,6 +5,10 @@ import { rem } from './pxto';
 const sizes = {
   app: rem(1200),
   appSpace: rem(24),
+  formComponentMinWidth: rem(340),
+  formComponentMinWidthMobile: rem(280),
+  formComponentMaxWidth: rem(370),
+  formComponentHeight: rem(68),
 };
 
 const fonts = {
@@ -171,10 +175,10 @@ export const lightModeColors = createTheme(modeColors, {
 
   buttonSecondaryColor: colors.text,
   buttonSecondaryBorder: colors.blackAlpha05,
-  buttonSecondaryBackground: colors.blackAlpha10,
+  buttonSecondaryBackground: colors.blackAlpha05,
   buttonSecondaryHoverColor: colors.black,
   buttonSecondaryHoverBorder: colors.blackAlpha10,
-  buttonSecondaryHoverBackground: colors.blackAlpha20,
+  buttonSecondaryHoverBackground: colors.blackAlpha10,
 
   buttonDisabledColor: 'var(--ieum-color-button-disabled-color)',
   buttonDisabledBorder: 'var(--ieum-color-button-disabled-border)',

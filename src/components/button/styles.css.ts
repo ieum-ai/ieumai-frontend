@@ -15,8 +15,8 @@ export const sizeVariants = styleVariants({
   xs: { fontSize: theme.fontSizes.xs, padding: `${rem(4)} ${rem(8)}` },
   sm: { fontSize: theme.fontSizes.sm, padding: `${rem(8)} ${rem(12)}` },
   md: { fontSize: theme.fontSizes.md, padding: `${rem(10)} ${rem(20)}` },
-  lg: { fontSize: theme.fontSizes.lg, padding: `${rem(12)} ${rem(24)}` },
-  xl: { fontSize: theme.fontSizes.xl, padding: `${rem(14)} ${rem(28)}` },
+  lg: { fontSize: theme.fontSizes.lg, padding: `${rem(12)} ${rem(28)}` },
+  xl: { fontSize: theme.fontSizes.xl, padding: `${rem(14)} ${rem(32)}` },
 });
 
 export const colorVariants = styleVariants({

@@ -38,3 +38,10 @@ export const formInnerButton = style({
   right: rem(16),
   transform: 'translateY(-50%)',
 });
+
+export const formSubmitContainer = style({
+  ...theme.layouts.centerY,
+  justifyContent: 'flex-end',
+  marginTop: rem(16),
+  gap: rem(24),
+});

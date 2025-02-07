@@ -20,8 +20,6 @@ const YEARS = [
 const ContributionPage = () => {
   const [check, setCheck] = useState(false);
 
-  console.log(check);
-
   return (
     <main className={styles.root} data-animate={true}>
       <Card className={styles.card}>
@@ -56,12 +54,17 @@ const ContributionPage = () => {
         </CardBody>
       </Card>
 
-      <Checkbox
-        label="본인은 개인 정보 이용 약관에 동의하는 것을 최종 확인했습니다."
-        labelAlign="end"
-        checked={check}
-        onClick={() => setCheck(!check)}
-      />
+      <div className={styles.formSubmitContainer}>
+        <Checkbox
+          label="본인은 개인 정보 이용 약관에 동의하는 것을 최종 확인했습니다."
+          labelAlign="end"
+          checked={check}
+          onClick={() => setCheck(!check)}
+        />
+        <Button size="lg" colorScheme="secondary">
+          확인
+        </Button>
+      </div>
     </main>
   );
 };

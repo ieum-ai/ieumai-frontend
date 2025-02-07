@@ -1,16 +1,19 @@
 import { globalStyle, style } from '@vanilla-extract/css';
 
-import { rem, theme } from '@ieum/styles';
+import { breakpoint, rem, theme } from '@ieum/styles';
 
 export const root = style({
   position: 'relative',
   width: '100%',
-  minWidth: rem(330),
-  maxWidth: rem(370),
-  height: rem(68),
+  minWidth: theme.sizes.formComponentMinWidthMobile,
+  maxWidth: theme.sizes.formComponentMaxWidth,
+  height: theme.sizes.formComponentHeight,
   border: `${rem(1)} solid ${theme.colors.formBorder}`,
   borderRadius: rem(10),
   backgroundColor: theme.colors.formBackground,
+  overflow: 'hidden',
+
+  ...breakpoint({ mobile: { minWidth: theme.sizes.formComponentMinWidth } }),
 });
 
 export const disabled = style({
