@@ -1,3 +1,7 @@
-export default function Home() {
-  return <div>Hello</div>;
-}
+import { Fragment } from 'react';
+
+const HomePage = () => {
+  return <Fragment>Main</Fragment>;
+};
+
+export default HomePage;
