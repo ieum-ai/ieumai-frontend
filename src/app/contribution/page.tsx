@@ -1,11 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-import { Button } from '@ieum/components/button';
-import { Card, CardBody, CardHeader } from '@ieum/components/card';
-import { Checkbox } from '@ieum/components/checkbox';
-import { Input } from '@ieum/components/input';
-import { Select } from '@ieum/components/select';
+import { Button, Card, CardBody, CardHeader, Checkbox, Input, Select } from '@ieum/components/ui';
 
 import * as styles from './page.css';
 
@@ -21,7 +17,7 @@ const ContributionPage = () => {
   const [check, setCheck] = useState(false);
 
   return (
-    <main className={styles.root} data-animate={true}>
+    <div className={styles.root} data-animate={true}>
       <Card className={styles.card}>
         <CardHeader asChild>
           <h2>연락처</h2>
@@ -56,7 +52,7 @@ const ContributionPage = () => {
 
       <div className={styles.formSubmitContainer}>
         <Checkbox
-          label="본인은 개인 정보 이용 약관에 동의하는 것을 최종 확인했습니다."
+          label="개인 정보 이용 약관에 동의하는 것을 최종 확인했습니다."
           labelAlign="end"
           checked={check}
           onClick={() => setCheck(!check)}
@@ -65,7 +61,7 @@ const ContributionPage = () => {
           확인
         </Button>
       </div>
-    </main>
+    </div>
   );
 };
 

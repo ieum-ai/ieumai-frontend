@@ -28,12 +28,6 @@ globalStyle('::selection', {
   backgroundColor: theme.colors.selection,
 });
 
-globalStyle('main', {
-  ...theme.layouts.column,
-  flex: 1,
-  padding: theme.sizes.appSpace,
-});
-
 globalStyle('label > .required', {
   alignSelf: 'center',
   marginLeft: rem(2),
