@@ -10,7 +10,7 @@ type InputProps = ComponentPropsWithoutRef<'input'> & {
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ id: _id, label, placeholder, required, disabled, ...props }, ref) => {
     const reactId: string = useId();
-    const id: string = _id ?? `ieum${reactId}`;
+    const id: string = _id ?? `ieum-${reactId}`;
 
     return (
       <div className={clsx(styles.root, disabled && styles.disabled)}>

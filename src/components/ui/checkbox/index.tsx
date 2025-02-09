@@ -12,7 +12,7 @@ type CheckboxProps = ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> & {
 export const Checkbox = forwardRef<ComponentRef<typeof CheckboxPrimitive.Root>, CheckboxProps>(
   ({ id: _id, className, label, labelAlign = 'start', ...props }, ref) => {
     const reactId: string = useId();
-    const id: string = _id ?? `ieum${reactId}`;
+    const id: string = _id ?? `ieum-${reactId}`;
 
     return (
       <div className={clsx(styles.root, styles.labelAlignVariants[labelAlign])}>

@@ -13,6 +13,8 @@
     "@radix-ui/react-checkbox": "^1.1.4",
     "@radix-ui/react-collapsible": "^1.1.3",
     "@radix-ui/react-slot": "^1.1.2",
+    "@use-funnel/browser": "^0.0.11",
+    "@use-funnel/next": "^0.0.10",
     "@vanilla-extract/css": "^1.17.1",
     "clsx": "^2.1.1",
     "next": "^15.1.6",

@@ -17,6 +17,12 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.1.2
         version: 1.1.2(@types/react@19.0.8)(react@19.0.0)
+      '@use-funnel/browser':
+        specifier: ^0.0.11
+        version: 0.0.11(react@19.0.0)
+      '@use-funnel/next':
+        specifier: ^0.0.10
+        version: 0.0.10(next@15.1.6(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
       '@vanilla-extract/css':
         specifier: ^1.17.1
         version: 1.17.1
@@ -770,6 +776,22 @@ packages:
   '@typescript-eslint/visitor-keys@8.23.0':
     resolution: {integrity: sha512-oWWhcWDLwDfu++BGTZcmXWqpwtkwb5o7fxUIGksMQQDSdPW9prsSnfIOZMlsj4vBOSrcnjIUZMiIjODgGosFhQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@use-funnel/browser@0.0.11':
+    resolution: {integrity: sha512-n1ghjFCqy8rJKZHRdyv2g5uqgFJaDsAqRO8DwbrS9acDVboL4+U836boH0KJ4RNnhL4kwX60AmHQXefQHQnf3Q==}
+    peerDependencies:
+      react: '>=16.8'
+
+  '@use-funnel/core@0.0.9':
+    resolution: {integrity: sha512-OSjsIV92pKAA1BrIsVZIPZdLw25XwMfeMT8HY3xTbEvkOvJS4MVBDjsVvP74Bbq+COQTsSIfeLpo6++lMt+6Hw==}
+    peerDependencies:
+      react: '>=16.8'
+
+  '@use-funnel/next@0.0.10':
+    resolution: {integrity: sha512-/FKkLNgGPdZ1OS20OHQrUiHM2jlRU37G1zTEQo+ylfZoiBLtnf6bN7i7vVYAGS4f8cl7x6OmLhw1WPDKc6Mtcg==}
+    peerDependencies:
+      next: '>=12'
+      react: '>=16.8'
 
   '@vanilla-extract/babel-plugin-debug-ids@1.2.0':
     resolution: {integrity: sha512-z5nx2QBnOhvmlmBKeRX5sPVLz437wV30u+GJL+Hzj1rGiJYVNvgIIlzUpRNjVQ0MgAgiQIqIUbqPnmMc6HmDlQ==}
@@ -2797,6 +2819,21 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.23.0
       eslint-visitor-keys: 4.2.0
+
+  '@use-funnel/browser@0.0.11(react@19.0.0)':
+    dependencies:
+      '@use-funnel/core': 0.0.9(react@19.0.0)
+      react: 19.0.0
+
+  '@use-funnel/core@0.0.9(react@19.0.0)':
+    dependencies:
+      react: 19.0.0
+
+  '@use-funnel/next@0.0.10(next@15.1.6(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@use-funnel/core': 0.0.9(react@19.0.0)
+      next: 15.1.6(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
 
   '@vanilla-extract/babel-plugin-debug-ids@1.2.0':
     dependencies:

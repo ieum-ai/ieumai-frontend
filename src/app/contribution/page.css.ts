@@ -10,6 +10,7 @@ export const root = style({
 export const card = style({
   ...theme.layouts.column,
   alignItems: 'flex-start',
+  marginBottom: rem(24),
   gap: rem(24),
 
   ...breakpoint({

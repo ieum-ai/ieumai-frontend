@@ -17,14 +17,14 @@ const ContributionPage = () => {
   const [check, setCheck] = useState(false);
 
   return (
-    <div className={styles.root} data-animate={true}>
+    <>
       <Card className={styles.card}>
         <CardHeader asChild>
           <h2>연락처</h2>
         </CardHeader>
         <CardBody className={styles.grid}>
           <div className={styles.formContainer}>
-            <Input placeholder="이메일" required />
+            <Input placeholder="이메일" type="email" required />
             <Button size="sm" colorScheme="primary" className={styles.formInnerButton}>
               인증
             </Button>
@@ -37,6 +37,7 @@ const ContributionPage = () => {
           </div>
         </CardBody>
       </Card>
+
       <Card className={styles.card}>
         <CardHeader asChild>
           <h2>상세정보</h2>
@@ -61,7 +62,7 @@ const ContributionPage = () => {
           확인
         </Button>
       </div>
-    </div>
+    </>
   );
 };
 
