@@ -2,15 +2,11 @@ import { style } from '@vanilla-extract/css';
 
 import { rem, theme, breakpoint } from '@ieum/styles';
 
-export const root = style({
-  ...theme.layouts.column,
-  gap: rem(24),
-});
-
 export const card = style({
   ...theme.layouts.column,
   alignItems: 'flex-start',
-  gap: rem(24),
+  marginBottom: theme.sizes.appSpace,
+  gap: theme.sizes.appSpace,
 
   ...breakpoint({
     tablet: {
@@ -43,5 +39,5 @@ export const formSubmitContainer = style({
   ...theme.layouts.centerY,
   justifyContent: 'flex-end',
   marginTop: rem(16),
-  gap: rem(24),
+  gap: theme.sizes.appSpace,
 });

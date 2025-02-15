@@ -4,3 +4,4 @@ export * from './checkbox';
 export * from './collapse';
 export * from './input';
 export * from './select';
+export * from './pagination';

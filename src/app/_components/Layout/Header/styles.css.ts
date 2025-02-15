@@ -43,6 +43,7 @@ export const item = style({
 
 export const active = style({
   color: theme.colors.text,
+  fontWeight: 600,
 });
 
 globalStyle(`${item} a`, { padding: rem(16) });

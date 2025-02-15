@@ -7,7 +7,9 @@ const Layout = ({ children }: PropsWithChildren) => {
   return (
     <div className={styles.root}>
       <Header />
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main} data-animate={true}>
+        {children}
+      </main>
     </div>
   );
 };

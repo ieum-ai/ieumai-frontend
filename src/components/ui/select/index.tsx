@@ -2,6 +2,7 @@ import { clsx } from 'clsx';
 import { ComponentPropsWithoutRef, forwardRef, useId } from 'react';
 
 import { StatMinusIcon } from '@ieum/components/icons';
+import { METADATA } from '@ieum/constants';
 
 import * as styles from './styles.css';
 
@@ -15,7 +16,7 @@ type SelectProps = ComponentPropsWithoutRef<'select'> & {
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(
   ({ id: _id, label, options, required, disabled, ...props }, ref) => {
     const reactId: string = useId();
-    const id: string = _id ?? `ieum${reactId}`;
+    const id: string = _id ?? `${METADATA.reactIdPrefix}-${reactId}`;
 
     return (
       <div className={clsx(styles.root, disabled && styles.disabled)}>

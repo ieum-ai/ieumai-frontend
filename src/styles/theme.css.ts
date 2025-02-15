@@ -5,6 +5,7 @@ import { rem } from './pxto';
 const sizes = {
   app: rem(1200),
   appSpace: rem(24),
+  appContent: rem(740),
 
   headerHeight: rem(80),
   headerHeightMobile: rem(56),
