@@ -7,7 +7,7 @@ export const tableContainer = style({
   border: `${rem(1)} solid ${theme.colors.cardBorder}`,
   borderCollapse: 'collapse',
   borderRadius: rem(16),
-  overflowX: 'scroll',
+  overflowX: 'auto',
   backgroundColor: theme.colors.cardBackground,
 });
 
@@ -67,7 +67,7 @@ globalStyle(`${table} th:nth-child(5), ${table} td:nth-child(5)`, {
   borderRight: 'none',
 });
 
-export const content = style({
+export const script = style({
   display: '-webkit-box',
   WebkitLineClamp: 1,
   WebkitBoxOrient: 'vertical',

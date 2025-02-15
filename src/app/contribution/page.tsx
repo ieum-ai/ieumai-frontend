@@ -58,9 +58,7 @@ const ContributionPage = () => {
           checked={check}
           onClick={() => setCheck(!check)}
         />
-        <Button size="lg" colorScheme="secondary">
-          확인
-        </Button>
+        <Button colorScheme="secondary">확인</Button>
       </div>
     </>
   );
