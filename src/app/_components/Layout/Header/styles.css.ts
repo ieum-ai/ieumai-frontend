@@ -2,14 +2,13 @@ import { globalStyle, style } from '@vanilla-extract/css';
 
 import { breakpoint, rem, theme } from '@ieum/styles';
 
-export const root = style({
+export const header = style({
   ...theme.layouts.center,
   position: 'fixed',
   top: 0,
   left: 0,
   width: '100%',
   height: theme.sizes.headerHeightMobile,
-  backgroundColor: theme.colors.background,
   zIndex: theme.zIndices.header,
 
   ...breakpoint({ tablet: { height: theme.sizes.headerHeight } }),

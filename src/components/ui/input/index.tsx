@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import { forwardRef, ComponentPropsWithoutRef, useId } from 'react';
 
-import { METADATA } from '@ieum/constants';
+import { METADATA } from '@ieum/constants/metadata';
 
 import * as styles from './styles.css';
 

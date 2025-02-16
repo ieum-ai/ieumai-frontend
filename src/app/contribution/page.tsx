@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 
 import { Button, Card, CardBody, CardHeader, Checkbox, Input, Select } from '@ieum/components/ui';
@@ -17,7 +18,7 @@ const ContributionPage = () => {
   const [check, setCheck] = useState(false);
 
   return (
-    <>
+    <div data-animate={true}>
       <Card className={styles.card}>
         <CardHeader asChild>
           <h2>연락처</h2>
@@ -60,7 +61,7 @@ const ContributionPage = () => {
         />
         <Button colorScheme="secondary">확인</Button>
       </div>
-    </>
+    </div>
   );
 };
 
