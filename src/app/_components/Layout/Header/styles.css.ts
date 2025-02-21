@@ -34,10 +34,6 @@ export const item = style({
   color: theme.colors.textSecondary,
   fontSize: theme.fontSizes.md,
   fontWeight: 500,
-  opacity: 1,
-  transition: 'opacity 0.3s, fill 0.3s, color 0.3s',
-
-  ':hover': { opacity: 0.7 },
 });
 
 export const active = style({
@@ -45,11 +41,17 @@ export const active = style({
   fontWeight: 600,
 });
 
-globalStyle(`${item} a`, { padding: rem(16) });
+globalStyle(`${item} a`, {
+  padding: rem(16),
+  opacity: 1,
+  transition: 'opacity 300ms, color 300ms',
+});
 
-globalStyle(`${item} svg`, { fill: `${theme.colors.textSecondary} !important` });
+globalStyle(`${item} a:hover`, { opacity: 0.7 });
 
-globalStyle(`${active} svg`, { fill: `${theme.colors.text} !important` });
+globalStyle(`${item} svg`, { color: `${theme.colors.textSecondary}`, transition: 'color 300ms' });
+
+globalStyle(`${active} svg`, { color: `${theme.colors.text}` });
 
 export const desktop = style({
   display: 'none',
@@ -63,7 +65,7 @@ export const mobile = style({
 
 export const branding = style({
   opacity: 1,
-  transition: 'opacity 0.3s, fill 0.3s, color 0.3s',
+  transition: 'opacity 300ms',
 
   ':hover': { opacity: 0.7 },
 });

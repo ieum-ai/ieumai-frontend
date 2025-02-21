@@ -10,7 +10,7 @@ import { ROUTES } from '@ieum/constants';
 
 import * as styles from './styles.css';
 
-export const MENU = [
+const MENU = [
   { path: ROUTES.about, title: '프로젝트 소개' },
   { path: ROUTES.test, title: '음성 테스트' },
   { path: ROUTES.home, title: <BrandLogo width={128} /> },

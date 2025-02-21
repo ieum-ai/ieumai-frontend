@@ -29,4 +29,9 @@ export const arrow = style({
   ...theme.layouts.center,
   width: rem(28),
   height: rem(28),
+  color: theme.colors.text,
+  opacity: 1,
+  transition: 'opacity 300ms',
+
+  ':hover': { opacity: 0.7 },
 });
