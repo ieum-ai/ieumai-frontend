@@ -60,6 +60,7 @@ export const desktop = style({
 
 export const mobile = style({
   display: 'flex',
+  color: theme.colors.text,
   ...breakpoint({ tablet: { display: 'none' } }),
 });
 
