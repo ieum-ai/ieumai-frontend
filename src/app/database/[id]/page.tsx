@@ -15,7 +15,7 @@ const DatabaseDetailPage = async ({ params, searchParams }: DatabaseDetailPagePr
   const page: number = p ? Number(p) : 1;
 
   return (
-    <>
+    <div data-animate={true}>
       <p className={styles.script}>
         어제 친구랑 같이 동네 산책을 나갔다가 우연히 작은 꽃집을 발견했는데, 사장님이 정말
         친절하시더라고요. 그래서 거기서 작은 화분 하나를 사왔어요.
@@ -102,7 +102,7 @@ const DatabaseDetailPage = async ({ params, searchParams }: DatabaseDetailPagePr
           <Pagination total={6} current={page} perPage={5} />
         </Card>
       </div>
-    </>
+    </div>
   );
 };
 

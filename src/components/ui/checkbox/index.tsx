@@ -2,12 +2,13 @@ import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import { clsx } from 'clsx';
 import { ComponentPropsWithoutRef, ComponentRef, forwardRef, useId } from 'react';
 
-import { METADATA } from '@ieum/constants';
+import { METADATA } from '@ieum/constants/metadata';
 
 import * as styles from './styles.css';
 
 type CheckboxProps = ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> & {
   label?: string;
+  className?: string;
   labelAlign?: keyof typeof styles.labelAlignVariants;
 };
 
@@ -17,13 +18,8 @@ export const Checkbox = forwardRef<ComponentRef<typeof CheckboxPrimitive.Root>, 
     const id: string = _id ?? `${METADATA.reactIdPrefix}-${reactId}`;
 
     return (
-      <div className={clsx(styles.root, styles.labelAlignVariants[labelAlign])}>
-        <CheckboxPrimitive.Root
-          id={id}
-          ref={ref}
-          className={clsx(className, styles.checkbox)}
-          {...props}
-        />
+      <div className={clsx(className, styles.root, styles.labelAlignVariants[labelAlign])}>
+        <CheckboxPrimitive.Root id={id} ref={ref} className={styles.checkbox} {...props} />
         {label && (
           <label className={styles.label} htmlFor={id}>
             {label}

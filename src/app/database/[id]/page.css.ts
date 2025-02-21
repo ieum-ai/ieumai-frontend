@@ -5,13 +5,25 @@ import { breakpoint, rem, theme } from '@ieum/styles';
 export const script = style({
   width: '100%',
   maxWidth: theme.sizes.appContent,
-  paddingBlock: theme.sizes.appSpace,
+  marginBlock: theme.sizes.appSpace,
   marginInline: 'auto',
   color: theme.colors.textSecondary,
-  fontSize: theme.fontSizes.xxxl,
+  fontSize: theme.fontSizes.xl,
   fontWeight: 600,
   textAlign: 'center',
+  lineHeight: '160%',
   wordBreak: 'keep-all',
+
+  ...breakpoint({
+    mobile: {
+      marginBlock: `calc(${theme.sizes.appSpace} * 2)`,
+      fontSize: theme.fontSizes.xxl,
+    },
+    tablet: {
+      marginBlock: `calc(${theme.sizes.appSpace} * 3)`,
+      fontSize: theme.fontSizes.xxxl,
+    },
+  }),
 });
 
 export const scriptDetail = style({

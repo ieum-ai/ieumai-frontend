@@ -10,7 +10,7 @@ const DatabasePage = async ({ searchParams }: DatabasePageProps) => {
   const page: number = p ? Number(p) : 1;
 
   return (
-    <>
+    <div data-animate={true}>
       <div className={styles.tableContainer}>
         <table className={styles.table}>
           <thead>
@@ -66,7 +66,7 @@ const DatabasePage = async ({ searchParams }: DatabasePageProps) => {
       </div>
 
       <Pagination total={10} current={page} perPage={5} />
-    </>
+    </div>
   );
 };
 

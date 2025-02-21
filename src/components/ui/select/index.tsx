@@ -2,7 +2,7 @@ import { clsx } from 'clsx';
 import { ComponentPropsWithoutRef, forwardRef, useId } from 'react';
 
 import { StatMinusIcon } from '@ieum/components/icons';
-import { METADATA } from '@ieum/constants';
+import { METADATA } from '@ieum/constants/metadata';
 
 import * as styles from './styles.css';
 

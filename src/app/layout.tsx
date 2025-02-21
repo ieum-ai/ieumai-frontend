@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { PropsWithChildren } from 'react';
 
-import { METADATA } from '@ieum/constants';
+import { METADATA } from '@ieum/constants/metadata';
 import { ThemeProvider } from '@ieum/states/ThemeProvider';
 import { darkModeColors, lightModeColors } from '@ieum/styles';
 
