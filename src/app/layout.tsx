@@ -3,11 +3,12 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { PropsWithChildren } from 'react';
 
+import { QueryClientProvider } from '@ieum/api/QueryClientProvider';
 import { METADATA } from '@ieum/constants/metadata';
-import { ThemeProvider } from '@ieum/states/ThemeProvider';
 import { darkModeColors, lightModeColors } from '@ieum/styles';
 
 import Layout from './_components/Layout';
+import { ThemeProvider } from './ThemeProvider';
 
 const pretendard = localFont({
   src: './_fonts/PretendardVariable.woff2',
@@ -58,9 +59,11 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <script dangerouslySetInnerHTML={{ __html: colorThemeScript }} />
       </head>
       <body>
-        <ThemeProvider>
-          <Layout>{children}</Layout>
-        </ThemeProvider>
+        <QueryClientProvider>
+          <ThemeProvider>
+            <Layout>{children}</Layout>
+          </ThemeProvider>
+        </QueryClientProvider>
       </body>
     </html>
   );
