@@ -4,7 +4,7 @@ import { breakpoint, rem, theme } from '@ieum/styles';
 
 export const section = style({
   ...theme.layouts.columnCenter,
-  paddingBlock: `calc(${theme.sizes.appSpace} * 6)`,
+  paddingBlock: `calc(${theme.sizes.appSpace} * 4)`,
   backgroundColor: theme.colors.background,
 });
 
@@ -37,7 +37,36 @@ export const aboutLink = style({
 });
 
 export const mapSection = style({
-  backgroundColor: theme.colors.cardBackground,
+  ...theme.layouts.column,
+  paddingBlock: `calc(${theme.sizes.appSpace} * 4)`,
+  alignItems: 'flex-end',
+
+  ...breakpoint({ tablet: { flexDirection: 'row', justifyContent: 'space-between' } }),
+});
+
+export const mapMetadata = style({
+  ...theme.layouts.columnCenter,
+  alignItems: 'flex-end',
+});
+
+export const region = style({
+  color: theme.colors.text,
+  fontSize: rem(24),
+  fontWeight: 600,
+});
+
+export const metadataTitle = style({
+  marginTop: rem(4),
+  color: theme.colors.textSecondary,
+  fontSize: theme.fontSizes.md,
+  fontWeight: 500,
+});
+
+export const recordTime = style({
+  marginTop: rem(12),
+  color: theme.colors.text,
+  fontSize: rem(36),
+  fontWeight: 500,
 });
 
 export const slogan = style({
