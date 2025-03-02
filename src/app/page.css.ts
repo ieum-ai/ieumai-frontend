@@ -25,6 +25,7 @@ export const description = style({
   fontSize: theme.fontSizes.base,
   fontWeight: 500,
   wordBreak: 'keep-all',
+  textAlign: 'center',
 
   ...breakpoint({
     mobile: { fontSize: theme.fontSizes.md },

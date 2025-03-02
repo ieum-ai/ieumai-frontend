@@ -116,6 +116,10 @@ const modeColors = createThemeContract({
   buttonDisabledBorder: 'var(--ieum-color-button-disabled-border)',
   buttonDisabledBackground: 'var(--ieum-color-button-disabled-background)',
 
+  recordButtonBorder: 'var(--ieum-color-record-button-border)',
+  recordButtonBackground: 'var(--ieum-color-record-button-background)',
+  recordRippleBackground: 'var(--ieum-color-record-ripple-background)',
+
   selection: 'var(--ieum-color-selection)',
 });
 
@@ -192,6 +196,10 @@ export const lightModeColors = createTheme(modeColors, {
   buttonDisabledBorder: 'var(--ieum-color-button-disabled-border)',
   buttonDisabledBackground: 'var(--ieum-color-button-disabled-background)',
 
+  recordButtonBorder: '#DBDCDE',
+  recordButtonBackground: '#E5E6E8',
+  recordRippleBackground: '#E2E2E2',
+
   selection: 'rgba(0, 0, 0, 0.15)',
 });
 
@@ -227,6 +235,10 @@ export const darkModeColors = createTheme(modeColors, {
   buttonDisabledColor: 'var(--ieum-color-button-disabled-color)',
   buttonDisabledBorder: 'var(--ieum-color-button-disabled-border)',
   buttonDisabledBackground: 'var(--ieum-color-button-disabled-background)',
+
+  recordButtonBorder: '#2F3031',
+  recordButtonBackground: '#242526',
+  recordRippleBackground: '#2D2E2F',
 
   selection: 'rgba(255, 255, 255, 0.15)',
 });
