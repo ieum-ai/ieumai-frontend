@@ -61,7 +61,7 @@ globalStyle(`${select}:not(:placeholder-shown):valid ~ label`, {
 
 export const icon = style({
   position: 'absolute',
-  fill: theme.colors.formIconFill,
+  color: theme.colors.formIconFill,
   top: '50%',
   transform: 'translateY(-50%)',
   right: theme.sizes.formComponentPadding,
