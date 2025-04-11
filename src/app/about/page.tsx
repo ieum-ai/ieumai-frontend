@@ -15,9 +15,9 @@ const AboutPage = () => {
       </div>
 
       <section className={styles.section}>
-        <div className={styles.cardImage}>
+        <div className={styles.imageContainer}>
           <Image
-            src="/assets/about/seoul-ethan-brooke.webp"
+            src="https://static.ieumai.org/assets/about/seoul-ethan-brooke.webp"
             alt="Seoul (Photo by Ethan Brooke)"
             sizes="(max-width: 768px) 100vw, (min-width: 768px) 50vw, (min-width: 1200px) 33vw"
             fill
@@ -56,9 +56,9 @@ const AboutPage = () => {
       </section>
 
       <div className={styles.cardReverse}>
-        <div className={styles.cardImage}>
+        <div className={styles.imageContainer}>
           <Image
-            src="/assets/about/busan-markus-winkler.webp"
+            src="https://static.ieumai.org/assets/about/busan-markus-winkler.webp"
             alt="Busan (Photo by Markus Winkler)"
             sizes="(max-width: 768px) 100vw, (min-width: 768px) 50vw, (min-width: 1200px) 33vw"
             fill

@@ -9,7 +9,7 @@ async function handleRequest(request) {
     url.hostname === 'static.ieumai.org' ||
     url.hostname === 'ieumai-cdn-proxy.luckytmrw.workers.dev'
   ) {
-    const rewrittenPath = `/ieum-ai/ieumai-frontend/refs/heads/main/public/static${url.pathname}${url.search}`;
+    const rewrittenPath = `/ieum-ai/ieumai-frontend/refs/heads/main/public${url.pathname}${url.search}`;
     const newUrl = `https://raw.githubusercontent.com${rewrittenPath}`;
 
     const originResponse = await fetch(newUrl);
