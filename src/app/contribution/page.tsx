@@ -1,22 +1,14 @@
-'use client';
-
-import { useState } from 'react';
-
 import { Button, Card, CardBody, CardHeader, Checkbox, Input, Select } from '@ieum/components/ui';
 
 import * as styles from './page.css';
 
-const YEARS = [
-  { value: '2020', label: '2020년' },
-  { value: '2021', label: '2021년' },
-  { value: '2022', label: '2022년' },
-  { value: '2023', label: '2023년' },
-  { value: '2024', label: '2024년' },
-];
+const currentYear = new Date().getFullYear();
+const YEARS = Array.from({ length: 101 }, (_, i) => {
+  const year = currentYear - i;
+  return { value: year.toString(), label: `${year}년` };
+});
 
 const ContributionPage = () => {
-  const [check, setCheck] = useState(false);
-
   return (
     <div data-animate={true}>
       <Card className={styles.card}>
@@ -53,12 +45,7 @@ const ContributionPage = () => {
       </Card>
 
       <div className={styles.formSubmitContainer}>
-        <Checkbox
-          label="개인 정보 이용 약관에 동의하는 것을 최종 확인했습니다."
-          labelAlign="end"
-          checked={check}
-          onClick={() => setCheck(!check)}
-        />
+        <Checkbox label="개인 정보 이용 약관에 동의하는 것을 최종 확인했습니다." labelAlign="end" />
         <Button colorScheme="secondary">확인</Button>
       </div>
     </div>

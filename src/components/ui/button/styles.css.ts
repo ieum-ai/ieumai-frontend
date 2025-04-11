@@ -3,7 +3,7 @@ import { styleVariants, style } from '@vanilla-extract/css';
 import { rem, theme } from '@ieum/styles';
 
 export const root = style({
-  ...theme.layouts.center,
+  ...theme.layout.center,
   flexShrink: 0,
   height: 'fit-content',
   border: `${rem(1)} solid transparent`,
@@ -13,40 +13,40 @@ export const root = style({
 });
 
 export const sizeVariants = styleVariants({
-  xs: { fontSize: theme.fontSizes.xs, padding: `${rem(4)} ${rem(8)}` },
-  sm: { fontSize: theme.fontSizes.sm, padding: `${rem(8)} ${rem(12)}` },
-  md: { fontSize: theme.fontSizes.md, padding: `${rem(12)} ${rem(20)}` },
-  lg: { fontSize: theme.fontSizes.lg, padding: `${rem(12)} ${rem(28)}` },
-  xl: { fontSize: theme.fontSizes.xl, padding: `${rem(14)} ${rem(32)}` },
+  xs: { fontSize: theme.fontSize.xs, padding: `${rem(4)} ${rem(8)}` },
+  sm: { fontSize: theme.fontSize.sm, padding: `${rem(8)} ${rem(12)}` },
+  md: { fontSize: theme.fontSize.md, padding: `${rem(12)} ${rem(20)}` },
+  lg: { fontSize: theme.fontSize.lg, padding: `${rem(12)} ${rem(28)}` },
+  xl: { fontSize: theme.fontSize.xl, padding: `${rem(14)} ${rem(32)}` },
 });
 
 export const colorVariants = styleVariants({
   primary: {
-    color: theme.colors.buttonPrimaryColor,
-    borderColor: theme.colors.buttonPrimaryBorder,
-    backgroundColor: theme.colors.buttonPrimaryBackground,
+    color: theme.color.buttonPrimaryColor,
+    borderColor: theme.color.buttonPrimaryBorder,
+    backgroundColor: theme.color.buttonPrimaryBackground,
 
     ':hover': {
-      color: theme.colors.buttonPrimaryHoverColor,
-      borderColor: theme.colors.buttonPrimaryHoverBorder,
-      backgroundColor: theme.colors.buttonPrimaryHoverBackground,
+      color: theme.color.buttonPrimaryHoverColor,
+      borderColor: theme.color.buttonPrimaryHoverBorder,
+      backgroundColor: theme.color.buttonPrimaryHoverBackground,
     },
   },
   secondary: {
-    color: theme.colors.buttonSecondaryColor,
-    borderColor: theme.colors.buttonSecondaryBorder,
-    backgroundColor: theme.colors.buttonSecondaryBackground,
+    color: theme.color.buttonSecondaryColor,
+    borderColor: theme.color.buttonSecondaryBorder,
+    backgroundColor: theme.color.buttonSecondaryBackground,
 
     ':hover': {
-      color: theme.colors.buttonSecondaryHoverColor,
-      borderColor: theme.colors.buttonSecondaryHoverBorder,
-      backgroundColor: theme.colors.buttonSecondaryHoverBackground,
+      color: theme.color.buttonSecondaryHoverColor,
+      borderColor: theme.color.buttonSecondaryHoverBorder,
+      backgroundColor: theme.color.buttonSecondaryHoverBackground,
     },
   },
   disabled: {
-    color: theme.colors.buttonDisabledColor,
-    borderColor: theme.colors.buttonDisabledBorder,
-    backgroundColor: theme.colors.buttonDisabledBackground,
+    color: theme.color.buttonDisabledColor,
+    borderColor: theme.color.buttonDisabledBorder,
+    backgroundColor: theme.color.buttonDisabledBackground,
   },
 });
 

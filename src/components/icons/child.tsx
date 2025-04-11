@@ -1,11 +1,11 @@
-import { Children, cloneElement, FC, isValidElement, ReactElement, ReactNode } from 'react';
+import { Children, cloneElement, isValidElement, ReactNode } from 'react';
 
 type ChildProps = {
   children: ReactNode;
   [key: string]: unknown;
 };
 
-const Child: FC<ChildProps> = ({ children, ...props }): ReactElement | null => {
+const Child = ({ children, ...props }: ChildProps) => {
   const child: ReactNode = Children.only(children);
 
   return isValidElement(child) ? cloneElement(child, props) : null;

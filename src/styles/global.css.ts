@@ -9,9 +9,13 @@ import { theme } from './theme.css';
 globalStyle('body', {
   paddingBottom: 'env(safe-area-inset-bottom)',
   overflowX: 'hidden',
-  fontFamily: theme.fonts.sans,
-  backgroundColor: theme.colors.background,
-  transition: 'background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+  fontFamily: theme.fontFamily.sans,
+  textRendering: 'optimizeLegibility',
+  WebkitFontSmoothing: 'antialiased',
+  WebkitTextSizeAdjust: '100%',
+  MozOsxFontSmoothing: 'grayscale',
+  backgroundColor: theme.color.background,
+  transition: 'background-color 200ms cubic-bezier(0.4, 0, 0.2, 1)',
   overflowY: 'scroll',
   scrollbarGutter: 'stable',
 });
@@ -25,11 +29,11 @@ globalStyle('[data-theme="dark"]', {
 });
 
 globalStyle('::selection', {
-  backgroundColor: theme.colors.selection,
+  backgroundColor: theme.color.selection,
 });
 
 globalStyle('label > .required', {
   alignSelf: 'center',
   marginLeft: rem(2),
-  color: theme.colors.blue600,
+  color: theme.color.blue600,
 });

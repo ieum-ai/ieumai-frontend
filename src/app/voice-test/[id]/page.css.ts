@@ -5,19 +5,19 @@ import { rem, theme } from '@ieum/styles';
 export const controlPanel = style({
   position: 'relative',
   width: '100%',
-  marginTop: `calc(${theme.sizes.appSpace} * 2)`,
+  marginTop: `calc(${theme.size.appSpace} * 2)`,
 });
 
 export const recordButton = style({
-  ...theme.layouts.center,
+  ...theme.layout.center,
   width: rem(52),
   height: rem(52),
   marginInline: 'auto',
-  border: `${rem(1)} solid ${theme.colors.recordButtonBorder}`,
+  border: `${rem(1)} solid ${theme.color.recordButtonBorder}`,
   borderRadius: '50%',
-  color: theme.colors.text,
-  backgroundColor: theme.colors.recordButtonBackground,
-  filter: `drop-shadow(${rem(1)} ${rem(1)} ${rem(6)} ${theme.colors.blackAlpha05})`,
+  color: theme.color.text,
+  backgroundColor: theme.color.recordButtonBackground,
+  filter: `drop-shadow(${rem(1)} ${rem(1)} ${rem(6)} ${theme.color.blackAlpha05})`,
   transition: 'opacity 300ms',
 
   ':hover': {
@@ -31,6 +31,6 @@ export const rippleContainer = style({
   left: '50%',
   width: rem(180),
   height: rem(180),
-  color: theme.colors.recordRippleBackground,
+  color: theme.color.recordRippleBackground,
   transform: 'translate(-50%, -50%)',
 });

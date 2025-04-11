@@ -3,32 +3,32 @@ import { globalStyle, style } from '@vanilla-extract/css';
 import { breakpoint, rem, theme } from '@ieum/styles';
 
 export const root = style({
-  ...theme.layouts.center,
+  ...theme.layout.center,
   position: 'absolute',
   top: 0,
   left: 0,
   width: '100%',
   height: '100%',
-  backgroundColor: theme.colors.cardBackground,
+  backgroundColor: theme.color.cardBackground,
 });
 
 globalStyle(`${root} > div`, {
-  ...theme.layouts.columnCenter,
+  ...theme.layout.columnCenter,
   width: '100%',
   height: '100%',
 });
 
 export const introText = style({
-  color: theme.colors.textSecondary,
-  fontSize: theme.fontSizes.xl,
+  color: theme.color.textSecondary,
+  fontSize: theme.fontSize.xl,
   fontWeight: 600,
   textAlign: 'center',
   lineHeight: '180%',
   wordBreak: 'keep-all',
 
   ...breakpoint({
-    mobile: { fontSize: theme.fontSizes.xxl },
-    tablet: { fontSize: theme.fontSizes.xxxl },
+    mobile: { fontSize: theme.fontSize.xxl },
+    tablet: { fontSize: theme.fontSize.xxxl },
   }),
 });
 
@@ -37,5 +37,5 @@ export const privacyCheckbox = style({
 });
 
 export const testButton = style({
-  marginTop: theme.sizes.appSpace,
+  marginTop: theme.size.appSpace,
 });

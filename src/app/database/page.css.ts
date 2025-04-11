@@ -4,11 +4,11 @@ import { rem, theme } from '@ieum/styles';
 
 export const tableContainer = style({
   width: '100%',
-  border: `${rem(1)} solid ${theme.colors.cardBorder}`,
+  border: `${rem(1)} solid ${theme.color.cardBorder}`,
   borderCollapse: 'collapse',
   borderRadius: rem(16),
   overflowX: 'auto',
-  backgroundColor: theme.colors.cardBackground,
+  backgroundColor: theme.color.cardBackground,
 });
 
 export const table = style({
@@ -17,15 +17,15 @@ export const table = style({
 });
 
 globalStyle(`${table} thead th`, {
-  color: theme.colors.textSecondary,
-  fontSize: theme.fontSizes.sm,
+  color: theme.color.textSecondary,
+  fontSize: theme.fontSize.sm,
   fontWeight: 600,
   borderTop: 'none',
 });
 
 globalStyle(`${table} tbody td`, {
-  color: theme.colors.text,
-  fontSize: theme.fontSizes.base,
+  color: theme.color.text,
+  fontSize: theme.fontSize.base,
   cursor: 'pointer',
 });
 
@@ -37,7 +37,7 @@ globalStyle(`${table} th, ${table} td`, {
   paddingBlock: rem(12),
   paddingInline: rem(12),
   textAlign: 'center',
-  border: `${rem(1)} solid ${theme.colors.cardBorder}`,
+  border: `${rem(1)} solid ${theme.color.cardBorder}`,
 });
 
 globalStyle(`${table} th:nth-child(1), ${table} td:nth-child(1)`, {

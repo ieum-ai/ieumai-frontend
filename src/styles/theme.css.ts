@@ -2,7 +2,7 @@ import { createGlobalTheme, createTheme, createThemeContract } from '@vanilla-ex
 
 import { rem } from './pxto';
 
-const sizes = {
+const size = {
   app: rem(1200),
   appSpace: rem(24),
   appContent: rem(740),
@@ -17,12 +17,12 @@ const sizes = {
   formComponentPadding: rem(16),
 };
 
-const fonts = {
+const fontFamily = {
   mono: `"Courier New", Courier, var(--font-pretendard), "Pretendard Variable", monospace`,
   sans: `var(--font-pretendard), "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif`,
 };
 
-const layouts = {
+const layout = {
   center: {
     display: 'flex',
     justifyContent: 'center',
@@ -63,7 +63,7 @@ const layouts = {
   },
 };
 
-const zIndices = {
+const zIndex = {
   behind: '-1',
   select: '50',
   overlay: '100',
@@ -72,7 +72,7 @@ const zIndices = {
   modalContent: '250',
 };
 
-const fontSizes = {
+const fontSize = {
   xxxl: rem(28),
   xxl: rem(24),
   xl: rem(20),
@@ -85,7 +85,7 @@ const fontSizes = {
   xxxs: rem(8),
 };
 
-const modeColors = createThemeContract({
+const modeColor = createThemeContract({
   background: 'var(--ieum-color-background)',
 
   text: 'var(--ieum-color-text)',
@@ -123,7 +123,7 @@ const modeColors = createThemeContract({
   selection: 'var(--ieum-color-selection)',
 });
 
-const colors = {
+const color = {
   white: '#FFFFFF',
   whiteAlpha05: 'rgba(255, 255, 255, 0.05)',
   whiteAlpha10: 'rgba(255, 255, 255, 0.1)',
@@ -160,37 +160,37 @@ const colors = {
   blue900: '#1A4560',
   blue950: '#122C3F',
 
-  ...modeColors,
+  ...modeColor,
 };
 
-export const lightModeColors = createTheme(modeColors, {
+export const lightModeColor = createTheme(modeColor, {
   background: '#F1F2F4',
 
-  text: colors.black,
-  textSecondary: colors.blackAlpha60,
+  text: color.black,
+  textSecondary: color.blackAlpha60,
 
   cardBackground: '#EDEDED',
-  cardBorder: colors.blackAlpha05,
+  cardBorder: color.blackAlpha05,
 
-  formBackground: colors.whiteAlpha90,
-  formBorder: colors.blackAlpha10,
-  formDisabledColor: colors.blackAlpha20,
-  formDisabledBackground: colors.whiteAlpha50,
-  formIconFill: colors.blackAlpha60,
+  formBackground: color.whiteAlpha90,
+  formBorder: color.blackAlpha10,
+  formDisabledColor: color.blackAlpha20,
+  formDisabledBackground: color.whiteAlpha50,
+  formIconFill: color.blackAlpha60,
 
-  buttonPrimaryColor: colors.white,
-  buttonPrimaryBorder: colors.black,
-  buttonPrimaryBackground: colors.black,
-  buttonPrimaryHoverColor: colors.white,
-  buttonPrimaryHoverBorder: colors.blackAlpha80,
-  buttonPrimaryHoverBackground: colors.blackAlpha80,
+  buttonPrimaryColor: color.white,
+  buttonPrimaryBorder: color.black,
+  buttonPrimaryBackground: color.black,
+  buttonPrimaryHoverColor: color.white,
+  buttonPrimaryHoverBorder: color.blackAlpha80,
+  buttonPrimaryHoverBackground: color.blackAlpha80,
 
-  buttonSecondaryColor: colors.text,
-  buttonSecondaryBorder: colors.blackAlpha05,
-  buttonSecondaryBackground: colors.blackAlpha05,
-  buttonSecondaryHoverColor: colors.black,
-  buttonSecondaryHoverBorder: colors.blackAlpha10,
-  buttonSecondaryHoverBackground: colors.blackAlpha10,
+  buttonSecondaryColor: color.text,
+  buttonSecondaryBorder: color.blackAlpha05,
+  buttonSecondaryBackground: color.blackAlpha05,
+  buttonSecondaryHoverColor: color.black,
+  buttonSecondaryHoverBorder: color.blackAlpha10,
+  buttonSecondaryHoverBackground: color.blackAlpha10,
 
   buttonDisabledColor: 'var(--ieum-color-button-disabled-color)',
   buttonDisabledBorder: 'var(--ieum-color-button-disabled-border)',
@@ -203,34 +203,34 @@ export const lightModeColors = createTheme(modeColors, {
   selection: 'rgba(0, 0, 0, 0.15)',
 });
 
-export const darkModeColors = createTheme(modeColors, {
-  background: colors.black,
+export const darkModeColor = createTheme(modeColor, {
+  background: color.black,
 
   text: '#F1F2F4',
-  textSecondary: colors.whiteAlpha60,
+  textSecondary: color.whiteAlpha60,
 
   cardBackground: 'rgba(237, 237, 237, 0.1)',
-  cardBorder: colors.whiteAlpha05,
+  cardBorder: color.whiteAlpha05,
 
-  formBackground: colors.blackAlpha90,
-  formBorder: colors.whiteAlpha20,
-  formDisabledColor: colors.whiteAlpha20,
-  formDisabledBackground: colors.blackAlpha50,
-  formIconFill: colors.whiteAlpha60,
+  formBackground: color.blackAlpha90,
+  formBorder: color.whiteAlpha20,
+  formDisabledColor: color.whiteAlpha20,
+  formDisabledBackground: color.blackAlpha50,
+  formIconFill: color.whiteAlpha60,
 
-  buttonPrimaryColor: colors.white,
-  buttonPrimaryBorder: colors.whiteAlpha10,
-  buttonPrimaryBackground: colors.black,
-  buttonPrimaryHoverColor: colors.white,
-  buttonPrimaryHoverBorder: colors.blackAlpha80,
-  buttonPrimaryHoverBackground: colors.blackAlpha80,
+  buttonPrimaryColor: color.white,
+  buttonPrimaryBorder: color.whiteAlpha10,
+  buttonPrimaryBackground: color.black,
+  buttonPrimaryHoverColor: color.white,
+  buttonPrimaryHoverBorder: color.blackAlpha80,
+  buttonPrimaryHoverBackground: color.blackAlpha80,
 
-  buttonSecondaryColor: colors.white,
-  buttonSecondaryBorder: colors.whiteAlpha05,
-  buttonSecondaryBackground: colors.whiteAlpha10,
-  buttonSecondaryHoverColor: colors.whiteAlpha70,
-  buttonSecondaryHoverBorder: colors.whiteAlpha05,
-  buttonSecondaryHoverBackground: colors.whiteAlpha05,
+  buttonSecondaryColor: color.white,
+  buttonSecondaryBorder: color.whiteAlpha05,
+  buttonSecondaryBackground: color.whiteAlpha10,
+  buttonSecondaryHoverColor: color.whiteAlpha70,
+  buttonSecondaryHoverBorder: color.whiteAlpha05,
+  buttonSecondaryHoverBackground: color.whiteAlpha05,
 
   buttonDisabledColor: 'var(--ieum-color-button-disabled-color)',
   buttonDisabledBorder: 'var(--ieum-color-button-disabled-border)',
@@ -244,10 +244,10 @@ export const darkModeColors = createTheme(modeColors, {
 });
 
 export const theme = createGlobalTheme(':root', {
-  colors,
-  fonts,
-  fontSizes,
-  sizes,
-  layouts,
-  zIndices,
+  color,
+  fontFamily,
+  fontSize,
+  size,
+  layout,
+  zIndex,
 });
