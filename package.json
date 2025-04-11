@@ -24,7 +24,7 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@hakui/eslint-config": "^0.0.2",
+    "@hakui/eslint-config": "^0.0.3",
     "@types/node": "^22.14.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.2",
