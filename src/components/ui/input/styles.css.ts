@@ -5,23 +5,23 @@ import { breakpoint, rem, theme } from '@ieum/styles';
 export const root = style({
   position: 'relative',
   width: '100%',
-  minWidth: theme.sizes.formComponentMinWidthMobile,
-  maxWidth: theme.sizes.formComponentMaxWidth,
-  height: theme.sizes.formComponentHeight,
-  border: `${rem(1)} solid ${theme.colors.formBorder}`,
+  minWidth: theme.size.formComponentMinWidthMobile,
+  maxWidth: theme.size.formComponentMaxWidth,
+  height: theme.size.formComponentHeight,
+  border: `${rem(1)} solid ${theme.color.formBorder}`,
   borderRadius: rem(10),
-  backgroundColor: theme.colors.formBackground,
+  backgroundColor: theme.color.formBackground,
   overflow: 'hidden',
 
-  ...breakpoint({ mobile: { minWidth: theme.sizes.formComponentMinWidth } }),
+  ...breakpoint({ mobile: { minWidth: theme.size.formComponentMinWidth } }),
 });
 
 export const disabled = style({
-  backgroundColor: theme.colors.formDisabledBackground,
+  backgroundColor: theme.color.formDisabledBackground,
 });
 
 globalStyle(`${disabled} label, ${disabled} input`, {
-  color: theme.colors.formDisabledColor,
+  color: theme.color.formDisabledColor,
 });
 
 globalStyle(`${disabled} input`, {
@@ -31,9 +31,9 @@ globalStyle(`${disabled} input`, {
 export const input = style({
   width: '100%',
   height: '100%',
-  padding: `${theme.sizes.formComponentPadding} ${theme.sizes.formComponentPadding} 0 ${theme.sizes.formComponentPadding}`,
-  color: theme.colors.text,
-  fontSize: theme.fontSizes.md,
+  padding: `${theme.size.formComponentPadding} ${theme.size.formComponentPadding} 0 ${theme.size.formComponentPadding}`,
+  color: theme.color.text,
+  fontSize: theme.fontSize.md,
   fontWeight: 500,
   outline: 'none',
   border: 'none',
@@ -42,17 +42,17 @@ export const input = style({
 
 export const label = style({
   position: 'absolute',
-  left: theme.sizes.formComponentPadding,
+  left: theme.size.formComponentPadding,
   bottom: rem(22),
-  fontSize: theme.fontSizes.md,
+  fontSize: theme.fontSize.md,
   fontWeight: 500,
-  color: theme.colors.textSecondary,
+  color: theme.color.textSecondary,
   transition: 'font-size 0.2s ease, bottom 0.2s ease',
   pointerEvents: 'none',
   userSelect: 'none',
 });
 
 globalStyle(`${input}:focus ~ label, ${input}:valid ~ label`, {
-  fontSize: theme.fontSizes.xs,
+  fontSize: theme.fontSize.xs,
   bottom: rem(38),
 });

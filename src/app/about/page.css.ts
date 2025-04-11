@@ -3,38 +3,27 @@ import { globalStyle, style } from '@vanilla-extract/css';
 import { rem, theme, breakpoint } from '@ieum/styles';
 
 export const hero = style({
-  ...theme.layouts.column,
-  alignItems: 'flex-start',
-  marginBottom: rem(64),
+  ...theme.layout.column,
+  gap: rem(12),
 });
 
-export const brandName = style({
-  marginTop: rem(8),
-  marginBottom: rem(64),
-  color: theme.colors.text,
+globalStyle(`${hero} > h2`, {
+  color: theme.color.text,
+  fontSize: theme.fontSize.lg,
+  fontWeight: 600,
 });
 
-export const card = style({
-  ...theme.layouts.column,
-  alignItems: 'flex-start',
-  marginBottom: theme.sizes.appSpace,
-  gap: theme.sizes.appSpace,
-  backgroundColor: 'transparent',
-  border: 'none',
-
-  ...breakpoint({
-    tablet: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-    },
-  }),
+export const section = style({
+  display: 'flex',
+  marginTop: `calc(${theme.size.appSpace} * 4)`,
+  gap: theme.size.appSpace,
 });
 
 export const cardReverse = style({
-  ...theme.layouts.column,
+  ...theme.layout.column,
   alignItems: 'flex-start',
-  marginBottom: theme.sizes.appSpace,
-  gap: theme.sizes.appSpace,
+  marginBottom: theme.size.appSpace,
+  gap: theme.size.appSpace,
   backgroundColor: 'transparent',
   border: 'none',
 
@@ -47,14 +36,11 @@ export const cardReverse = style({
 });
 
 export const cardImage = style({
+  position: 'relative',
   width: '100%',
-  height: 'auto',
+  height: '500px',
 
-  ...breakpoint({
-    tablet: {
-      width: '33%',
-    },
-  }),
+  ...breakpoint({ tablet: { width: '33%' } }),
 });
 
 globalStyle(`${cardImage} > img`, {

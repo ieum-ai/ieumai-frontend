@@ -5,7 +5,7 @@ import { PropsWithChildren } from 'react';
 
 import { QueryClientProvider } from '@ieum/api/QueryClientProvider';
 import { METADATA } from '@ieum/constants/metadata';
-import { darkModeColors, lightModeColors } from '@ieum/styles';
+import { darkModeColor, lightModeColor } from '@ieum/styles';
 
 import Layout from './_components/Layout';
 import { ThemeProvider } from './ThemeProvider';
@@ -25,7 +25,7 @@ const colorThemeScript = `
       window.__theme = newTheme;
       preferredTheme = newTheme;
       document.documentElement.setAttribute('data-theme', newTheme);
-      document.documentElement.className = newTheme === 'dark' ? '${darkModeColors}' : '${lightModeColors}';
+      document.documentElement.className = newTheme === 'dark' ? '${darkModeColor}' : '${lightModeColor}';
       document.documentElement.classList.add('${pretendard.variable}');
       window.__onThemeChange(newTheme);
     }

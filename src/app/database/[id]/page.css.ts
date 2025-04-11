@@ -4,11 +4,11 @@ import { breakpoint, rem, theme } from '@ieum/styles';
 
 export const script = style({
   width: '100%',
-  maxWidth: theme.sizes.appContent,
-  marginBlock: theme.sizes.appSpace,
+  maxWidth: theme.size.appContent,
+  marginBlock: theme.size.appSpace,
   marginInline: 'auto',
-  color: theme.colors.textSecondary,
-  fontSize: theme.fontSizes.xl,
+  color: theme.color.textSecondary,
+  fontSize: theme.fontSize.xl,
   fontWeight: 600,
   textAlign: 'center',
   lineHeight: '160%',
@@ -16,18 +16,18 @@ export const script = style({
 
   ...breakpoint({
     mobile: {
-      marginBlock: `calc(${theme.sizes.appSpace} * 2)`,
-      fontSize: theme.fontSizes.xxl,
+      marginBlock: `calc(${theme.size.appSpace} * 2)`,
+      fontSize: theme.fontSize.xxl,
     },
     tablet: {
-      marginBlock: `calc(${theme.sizes.appSpace} * 3)`,
-      fontSize: theme.fontSizes.xxxl,
+      marginBlock: `calc(${theme.size.appSpace} * 3)`,
+      fontSize: theme.fontSize.xxxl,
     },
   }),
 });
 
 export const scriptDetail = style({
-  marginTop: `calc(${theme.sizes.appSpace} * 2)`,
+  marginTop: `calc(${theme.size.appSpace} * 2)`,
   display: 'grid',
   gridTemplateColumns: '1fr',
   gap: rem(24),
@@ -36,80 +36,80 @@ export const scriptDetail = style({
 });
 
 export const metadata = style({
-  ...theme.layouts.column,
+  ...theme.layout.column,
   width: '100%',
   listStyle: 'none',
-  gap: theme.sizes.appSpace,
+  gap: theme.size.appSpace,
 });
 
 globalStyle(`${metadata} li`, {
-  ...theme.layouts.rowBetween,
+  ...theme.layout.rowBetween,
   width: '100%',
   gap: rem(16),
 });
 
 globalStyle(`${metadata} li h3`, {
-  color: theme.colors.textSecondary,
-  fontSize: theme.fontSizes.sm,
+  color: theme.color.textSecondary,
+  fontSize: theme.fontSize.sm,
   fontWeight: 600,
   whiteSpace: 'nowrap',
 });
 
 globalStyle(`${metadata} li p`, {
-  color: theme.colors.text,
-  fontSize: theme.fontSizes.md,
+  color: theme.color.text,
+  fontSize: theme.fontSize.md,
   fontWeight: 500,
 });
 
 export const contribution = style({
-  ...theme.layouts.column,
+  ...theme.layout.column,
   width: '100%',
   justifyContent: 'flex-start',
 });
 
 globalStyle(`${contribution} ul`, {
-  ...theme.layouts.column,
+  ...theme.layout.column,
   width: '100%',
   listStyle: 'none',
   gap: rem(16),
 });
 
 globalStyle(`${contribution} li`, {
-  ...theme.layouts.rowBetween,
+  ...theme.layout.rowBetween,
   width: '100%',
 });
 
 globalStyle(`${contribution} li > div`, {
-  ...theme.layouts.centerY,
+  ...theme.layout.centerY,
   gap: rem(16),
 });
 
 export const contributionMetadata = style({
-  ...theme.layouts.column,
+  ...theme.layout.column,
   gap: rem(2),
 });
 
 export const contributionIndex = style({
-  ...theme.layouts.center,
+  ...theme.layout.center,
   width: rem(32),
   height: rem(32),
-  color: theme.colors.textSecondary,
-  fontSize: theme.fontSizes.sm,
+  color: theme.color.textSecondary,
+  fontSize: theme.fontSize.sm,
   fontWeight: 600,
-  border: `${rem(1)} solid ${theme.colors.cardBorder}`,
+  border: `${rem(1)} solid ${theme.color.cardBorder}`,
   borderRadius: '50%',
-  backgroundColor: theme.colors.background,
+  backgroundColor: theme.color.background,
   userSelect: 'none',
 });
 
 export const contributionDate = style({
-  color: theme.colors.textSecondary,
-  fontSize: theme.fontSizes.xs,
+  color: theme.color.textSecondary,
+  fontSize: theme.fontSize.xs,
   fontWeight: 500,
 });
 
 export const contributionTitle = style({
-  color: theme.colors.text,
-  fontSize: theme.fontSizes.base,
+  color: theme.color.text,
+  fontSize: theme.fontSize.base,
   fontWeight: 500,
 });

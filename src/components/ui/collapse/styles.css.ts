@@ -15,9 +15,9 @@ export const content = style({
 });
 
 globalStyle(`${content}[data-state="open"]`, {
-  animation: `${slideDown} 0.3s cubic-bezier(0.22, 1, 0.36, 1)`,
+  animation: `${slideDown} 300ms cubic-bezier(0.22, 1, 0.36, 1)`,
 });
 
 globalStyle(`${content}[data-state="closed"]`, {
-  animation: `${slideUp} 0.3s cubic-bezier(0.22, 1, 0.36, 1)`,
+  animation: `${slideUp} 300ms cubic-bezier(0.22, 1, 0.36, 1)`,
 });

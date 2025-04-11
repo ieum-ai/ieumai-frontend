@@ -3,17 +3,17 @@ import { style } from '@vanilla-extract/css';
 import { breakpoint, theme } from '@ieum/styles';
 
 export const card = style({
-  ...theme.layouts.column,
-  marginBlock: theme.sizes.appSpace,
+  ...theme.layout.column,
+  marginBlock: theme.size.appSpace,
 });
 
 export const script = style({
   width: '100%',
-  maxWidth: theme.sizes.appContent,
-  marginBlock: theme.sizes.appSpace,
+  maxWidth: theme.size.appContent,
+  marginBlock: theme.size.appSpace,
   marginInline: 'auto',
-  color: theme.colors.textSecondary,
-  fontSize: theme.fontSizes.xl,
+  color: theme.color.textSecondary,
+  fontSize: theme.fontSize.xl,
   fontWeight: 600,
   textAlign: 'center',
   lineHeight: '160%',
@@ -21,12 +21,12 @@ export const script = style({
 
   ...breakpoint({
     mobile: {
-      marginBlock: `calc(${theme.sizes.appSpace} * 2)`,
-      fontSize: theme.fontSizes.xxl,
+      marginBlock: `calc(${theme.size.appSpace} * 2)`,
+      fontSize: theme.fontSize.xxl,
     },
     tablet: {
-      marginBlock: `calc(${theme.sizes.appSpace} * 3)`,
-      fontSize: theme.fontSizes.xxxl,
+      marginBlock: `calc(${theme.size.appSpace} * 3)`,
+      fontSize: theme.fontSize.xxxl,
     },
   }),
 });
